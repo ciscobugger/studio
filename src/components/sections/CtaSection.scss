@@ -1,0 +1,106 @@
+:root {
+  --main-color: #0c0c0d;
+  --second-color: #14cf93;
+  --third-color: #09a271;
+  --white: #ffffff;
+}
+
+// CTA wrapper
+.cta-wrapper {
+  z-index: 30;
+  background-color: #0b0b0b;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+// Text rotator main
+.text-rotator-main {
+  z-index: 20;
+  background-color: var(--white);
+  filter: invert(100%);
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  
+  &:hover {
+    filter: none;
+  }
+}
+
+// Container for scrolling content
+.text-rotator-container {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+// Text rotator content
+.text-rotator-content {
+  align-items: center;
+  display: flex;
+}
+
+// Text rotator
+.text-rotator {
+  opacity: 1;
+  color: var(--main-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Coolvetica Condensed', sans-serif;
+  font-size: 30vw;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+// Line icon
+.line-icon {
+  background-color: var(--main-color);
+  opacity: 0.42;
+  flex: none;
+  width: 140px;
+  height: 1px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+// Media queries for responsive design
+@media screen and (max-width: 991px) {
+  .text-rotator-main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .text-rotator {
+    font-size: 100px;
+    line-height: 1;
+    animation-duration: 0.5s;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text-rotator-main {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  
+  .text-rotator {
+    font-size: 100px;
+    line-height: 1;
+  }
+  
+  .line-icon {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+} 

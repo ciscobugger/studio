@@ -1,0 +1,131 @@
+@import '../styles/global.scss';
+@import '../components/sections/ContactHero.scss';
+
+.contact-page {
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 20;
+  background-color: var(--white);
+  border-radius: 20px 20px 0 0;
+  padding-top: 30px;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3%;
+  width: 100%;
+}
+
+.contact-content {
+  padding: 50px 0 100px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.contact-info {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--main-color);
+  }
+
+  .info-item {
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--second-color);
+    }
+
+    p {
+      color: rgba(0, 0, 0, 0.8);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+  }
+}
+
+.contact-form {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  .form-group {
+    margin-bottom: 25px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--main-color);
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      font-size: 1rem;
+      background-color: #f9f9f9;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: var(--second-color);
+        background-color: white;
+        box-shadow: 0 0 0 2px rgba(20, 207, 147, 0.1);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+  }
+
+  .button {
+    background-color: #2b20ff;
+  }
+
+  .submit-button {
+    background-color: #2b20ff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--third-color);
+    }
+  }
+} 

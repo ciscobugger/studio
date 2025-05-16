@@ -1,0 +1,174 @@
+// AboutHero.scss
+
+:root {
+  --main-color: #0c0c0d;
+  --second-color: #14cf93;
+  --third-color: #09a271;
+  --white: #ffffff;
+  --font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+// Main wrapper - similar to blog-hero-wrapper
+.about-hero-wrapper {
+  height: 150vh; // Taller container for parallax effect
+  position: relative;
+  overflow: visible;
+  will-change: transform; // Add will-change for smoother performance
+}
+
+// First section that stays fixed - similar to blog-hero-first
+.about-hero-first {
+  z-index: 10; // Increase z-index to prevent conflicts
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+  overflow: visible;
+  will-change: transform; // Add will-change for smoother performance
+}
+
+// Hero content container - similar to blog-hero-content
+.about-hero-content {
+  z-index: 9; // Make sure this is lower than first but higher than content below
+  background-color: var(--white);
+  flex-direction: row;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  will-change: transform; // Add will-change for smoother performance
+}
+
+.hero-inner {
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  will-change: transform; // Add will-change for smoother performance
+}
+
+.main-image {
+  width: 22vw;
+  height: 27vw;
+  min-height: 27vw;
+  position: relative;
+  left: 0%;
+  overflow: hidden;
+}
+
+.main-image.second {
+  width: 11vw;
+  height: auto;
+  min-height: auto;
+  top: -19.1vh;
+  left: -4.2vw;
+}
+
+.main-image.second.absolute {
+  width: 11vw;
+  position: absolute;
+  inset: 11.9vh 3.5vw auto auto;
+}
+
+.top-title-overflow {
+  position: relative;
+}
+
+.top-title-overflow.add-overflow {
+  overflow: hidden;
+}
+
+.hero-main-title {
+  color: var(--main-color);
+  text-transform: uppercase;
+  white-space: normal;
+  word-break: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Coolvetica Condensed', sans-serif;
+  font-size: 30vw;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.hero-main-title.for-inner {
+  white-space: normal;
+  word-break: normal;
+}
+
+@media screen and (max-width: 991px) {
+  .hero-inner {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .main-image {
+    width: 30vw;
+    height: 30vw;
+    min-height: 30vw;
+  }
+  
+  .main-image.second {
+    width: 20vw;
+  }
+  
+  .main-image.second.absolute {
+    top: 11.7vh;
+  }
+
+  .about-hero-wrapper {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-image.second.absolute {
+    width: 15vw;
+    top: 8.3vh;
+    right: 8.3vw;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-inner {
+    padding-top: 0;
+  }
+  
+  .hero-main-title {
+    font-size: 38vw;
+  }
+  
+  .main-image.second {
+    width: 25vw;
+    min-height: 40vw;
+    top: -8vh;
+  }
+  
+  .main-image.second.absolute {
+    width: 29vw;
+    display: none;
+    top: 7.3vh;
+    right: -1.6vw;
+  }
+
+  .about-hero-wrapper {
+    height: 70vh;
+  }
+
+  .about-hero-first {
+    height: 70vh;
+    min-height: 70vh;
+  }
+}

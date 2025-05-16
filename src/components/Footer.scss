@@ -1,0 +1,472 @@
+:root {
+  --main-color: #0c0c0d;
+  --second-color: #14cf93;
+  --third-color: #09a271;
+  --white: #ffffff;
+  --body-text-color: #f5f5f5;
+}
+
+/* Footer */
+.footer {
+  z-index: 10;
+  color: #d9dae2;
+  background-color: #000;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  min-height: 50vh;
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 50px 3% 30px;
+}
+
+/* Container */
+.container {
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* Footer grid second */
+.footer-grid-second {
+  z-index: 4;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+  position: relative;
+  width: 100%;
+}
+
+/* Footer title */
+.footer-title {
+  opacity: 0.76;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+/* Navigation flex */
+.navigation-flex {
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+}
+
+/* Button line */
+.button-line {
+  color: #f1f3f8;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  position: relative;
+  
+  &:hover {
+    color: #f1f3f8;
+    
+    .line-bottom {
+      width: 100%;
+    }
+  }
+}
+
+/* Line bottom */
+.line-bottom {
+  background-color: #d9dae2;
+  width: 0;
+  height: 1px;
+  margin-top: 6px;
+  display: block;
+  transition: width 0.3s ease;
+}
+
+/* Subscribe form */
+.subscribe-form {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+/* Subscribe field footer */
+.subscribe-field-footer {
+  color: #000;
+  background-color: #f1f3f8;
+  background-image: url("https://cdn.prod.website-files.com/672a1dc3f9c27f98c24c36dc/672a1dc3f9c27f98c24c37cb_paper-planes.avif");
+  background-position: 15px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  border: 1px #000;
+  align-self: center;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 0;
+  padding-left: 52px;
+  font-size: 17px;
+
+  &::placeholder {
+    color: #000;
+    font-size: 17px;
+    font-weight: 500;
+  }
+}
+
+/* Button subscribe */
+.button-subscribe {
+  color: #d9dae2;
+  cursor: pointer;
+  background-color: #000;
+  padding: 19px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: inline-block;
+
+  &:hover {
+    background-color: #080425;
+  }
+
+  &.subscribe {
+    background-color: #2018bf;
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 24px 29px;
+    position: absolute;
+    inset: 6px 6px auto auto;
+
+    &:hover {
+      background-color: darken(#2018bf, 10%);
+    }
+  }
+}
+
+/* Flex space between */
+.flex-space-between {
+  flex-flow: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+/* Margin 15px */
+.margin-15px {
+  margin-top: 15px;
+}
+
+/* Checkbox container */
+.checkbox-container {
+  position: relative;
+  margin-top: 15px;
+}
+
+/* Original checkbox - hidden but still accessible */
+.original-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Checkbox field */
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Custom checkbox */
+.custom-checkbox {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  border: 1px solid #d9dae2;
+  background-color: transparent;
+  margin-right: 10px;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Checkmark (hidden by default) */
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 6px;
+  height: 11px;
+  border: solid #d9dae2;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+/* When the checkbox is checked, display the checkmark */
+.original-checkbox:checked ~ .custom-checkbox {
+  opacity: 1;
+  background-color: transparent;
+}
+
+.original-checkbox:checked ~ .custom-checkbox:after {
+  display: block;
+}
+
+/* Checkbox label footer */
+.checkbox-label-footer {
+  color: #f1f3f8;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+/* Copyright flex bottom */
+.copyright-flex-bottom {
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  display: flex;
+}
+
+/* Copyright flex */
+.copyright-flex {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  display: flex;
+}
+
+/* Figma file absolute */
+.figma-file-absolute {
+  grid-column-gap: 11px;
+  grid-row-gap: 11px;
+  color: #d9dae2;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+  position: absolute;
+  inset: auto auto 20px 20px;
+
+  &.for-copyright {
+    opacity: 1;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    &:hover {
+      opacity: 0.69;
+      color: #d9dae2;
+    }
+
+    &:hover .button-button-icon .buton-icon-svg {
+      animation: exitRightEnterLeft 0.4s linear;
+    }
+  }
+}
+
+/* Figma text */
+.figma-text {
+  opacity: 1;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+/* White link */
+.white-link {
+  opacity: 1;
+  color: var(--white);
+  transition: opacity 0.3s ease;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Button button icon */
+.button-button-icon {
+  z-index: 5;
+  color: #000;
+  background-color: #f1f3f8;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  position: absolute;
+  inset: 10px 10px auto auto;
+  overflow: hidden;
+  transform: none;
+
+  &.relative {
+    background-color: var(--main-color);
+    color: #f1f3f8;
+    border: 1px solid #ffffff45;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    
+    &:hover .buton-icon-svg {
+      animation: exitRightEnterLeft 0.4s linear;
+    }
+  }
+}
+
+/* Button icon svg */
+.buton-icon-svg {
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+
+  &.is-absolute {
+    z-index: 2;
+    position: absolute;
+    transform: translate(-30px);
+  }
+}
+
+@keyframes exitRightEnterLeft {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  45% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-30px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Webflow form styles */
+.w-form {
+  margin: 0 0 15px;
+}
+
+.w-checkbox {
+  margin-bottom: 5px;
+  padding-left: 0;
+  display: block;
+  position: relative;
+}
+
+/* Grid positioning */
+#w-node-ce4b46b4-a130-dd05-ffe7-a688d5794769-d5794764 {
+  grid-area: 1 / 9 / 2 / 13;
+}
+
+#w-node-ce4b46b4-a130-dd05-ffe7-a688d579477c-d5794764 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+#w-node-ce4b46b4-a130-dd05-ffe7-a688d5794791-d5794764 {
+  grid-area: 1 / 3 / 2 / 5;
+}
+
+#w-node-ce4b46b4-a130-dd05-ffe7-a688d57947a1-d5794764 {
+  grid-area: 1 / 5 / 2 / 7;
+}
+
+/* Media queries */
+@media screen and (max-width: 991px) {
+  .footer {
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 30px;
+  }
+
+  .footer-grid-second {
+    grid-row-gap: 40px;
+    flex-flow: column;
+    grid-template-columns: 2fr;
+    display: flex;
+  }
+  
+  .figma-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-grid-second {
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-columns: 2fr 0.25fr;
+  }
+  
+  .footer {
+    z-index: 15;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .footer-grid-second {
+    grid-template-columns: 2fr;
+  }
+  
+  .subscribe-field-footer {
+    background-position: 5%;
+    background-size: 26px;
+  }
+  
+  .subscribe-form {
+    width: 100%;
+  }
+  
+  .footer {
+    padding-top: 30px;
+  }
+  
+  .copyright-flex-bottom {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .checkbox-main {
+    flex: none;
+  }
+} 

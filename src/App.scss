@@ -1,0 +1,24 @@
+/* Global Layout Styles */
+
+:root {
+  --white: #ffffff;
+  --main-color: #0c0c0d;
+  --second-color: #14cf93;
+}
+
+.main-content {
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+.global-cta-wrapper {
+  position: relative;
+  z-index: 20;
+  margin-top: 150px; /* Consistent spacing before CTA */
+}
+
+/* Ensure consistent spacing at the bottom of all page sections */
+.section:last-child {
+  padding-bottom: 50px;
+} 
